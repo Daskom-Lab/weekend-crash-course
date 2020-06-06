@@ -1,0 +1,260 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Basic Overview</title>
+
+		<!-- Reveal JS Sources -->
+		<link rel="stylesheet" href="../../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/theme/night.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<p>- Basic Overview -</p>
+					<img src="giphy.webp" alt="its happening !">	
+				</section>
+				<section data-background-color="rgb(237, 230, 230)">
+					<p style="color: red;">By [FAI]</p>
+				</section>
+				<section>
+					<section>
+						<p>Client - Server</p>
+					</section>
+					<section>
+						<p>Apa itu client ?, Apa itu server ?</p>
+						<p class="fragment fade-up">
+							A client is a piece of computer hardware or software that accesses a service made available by a server. 
+							<br> The server is often (but not always) on another computer system, in which case the client accesses the service by way of a network. 
+							<br> - Wikipedia style
+						</p>
+					</section>
+					<section>
+						<p>My style</p>
+						<p class="fragment fade-up">
+							Client adalah perangkat yang mengakses
+							<br> Server adalah perangkat yang menyediakan
+						</p>
+					</section>
+					<section>
+						<p>Jenis jenis client-server</p>
+						<p class="fragment fade-up">
+							> lokal
+							<br> > global
+						</p>
+					</section>
+					<section>
+						<p>Lokal</p>
+						<p class="fragment fade-up">
+							> localhost
+							<br> > 127.0.0.1
+							<br> > 0.0.0.0
+						</p>
+					</section>
+					<section>
+						<p>Global</p>
+						<p class="fragment fade-up">
+							> daskomlab.com
+							<br> > 153.92.4.22
+						</p>
+					</section>
+					<section>
+						<p>Bagaimana cara client mengakses server ?</p>
+						<p class="fragment fade-up">
+							Menggunakan sebuah teknik yang dinamakan request response
+						</p>
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>Request - Response</p>
+					</section>
+					<section>
+						Client mengirim <b style="color: chartreuse;">request</b> 
+						<br> <img src="client_packet.png" width="500" height="400">
+					</section>
+					<section>
+						Server menerima dan memproses <b style="color: chartreuse;">request</b>
+						<br> lalu mengirim <b style="color: chartreuse;">response</b>
+						<br> <img src="server_process.webp" width="500" height="400">
+					</section>
+					<section>
+						Client menerima <b style="color: chartreuse;">response</b> 
+						<br> <img src="packet_sent.gif" width="500" height="400">
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>Development</p>
+					</section>
+					<section>
+						Backend - Frontend
+					</section>
+					<section>
+						Apa itu <b style="color: chartreuse;">Backend</b> ?
+						<br> Backend adalah sistem yang berfungsi untuk memproses setiap request yang dikirim oleh client
+						<br> <img src="warehouse.gif" width="500" height="300" alt="">
+						<br> <span style="font-size: 25px;">Analoginya: warehouse</span>
+					</section>
+					<section>
+						Apa itu <b style="color: chartreuse;">Frontend</b> ?
+						<br> Frontend adalah sebuah hasil dari response yang telah diperbagus atau diberi hiasan dan lain lain
+						<br> <img src="packaging.gif" width="500" height="400">
+					</section>
+					<section>
+						Contoh pekerjaan backend
+						<pre><code data-trim data-noescape>
+						SELECT new.gender, COUNT(new.gender) as 'total'
+						FROM 
+						( 
+							SELECT hobbies.id, hobbies.name, users.gender 
+							from hobbies
+							LEFT JOIN map_user_hobby
+							ON map_user_hobby.id_hobby = hobbies.id
+							LEFT join users
+							on map_user_hobby.id_user = users.id
+						) as new
+						WHERE new.name = 'sing'
+						</code></pre>
+					</section>
+					<section>
+						Contoh pekerjaan frontend
+						<pre><code data-trim data-noescape>
+						html {
+							width: 100%;
+							height: 100%;
+							background: #E5E5E5;
+						}
+					
+						body {
+							width: 100%;
+							height: calc(100% - 61px);
+							margin: 0px;
+							padding-top: 5px;
+							background: #E5E5E5;
+						}
+					
+						.toolbar {
+							position: relative;
+							width: calc(100% - 100px);
+							height: 50px;
+							padding-left: 50px;
+							margin-right: 50px;
+							display: flex;
+							flex-direction: row;
+							padding-bottom: 5px;
+						}
+						</code></pre>
+					</section>
+					<section>
+						<p>Deployment</p>
+					</section>
+					<section>
+						Apa itu <b style="color: chartreuse;">Deployment</b> ?
+						<br> Deployment adalah tahap dimana seluruh kodingan / codebase disimpan dan dijalankan dalam server pada tahap produksi(production)
+					</section>
+					<section>
+						Jenis jenis deployment
+						<ul>
+							<li>
+								Otomatis (DevOps), Contohnya: travisci, circleci, github action, dll
+							</li>
+							<li>
+								Manual, Login manual ke server, Mindahin kodingan manual dsb
+							</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					<section>
+						Sysadmin
+					</section>
+					<section>
+						Apa itu <b style="color: chartreuse;">Sysadmin</b> ?
+						<br> Sysadmin adalah sebuah singkatan dari system administrator yaitu orang yang mengatur dan memanage sebuah server dari sebuah sistem
+					</section>
+					<section>
+						Bagaimana kerjanya ?
+						<br> <img src="sysadmin2.gif" alt="">
+						<br> <img src="sysadmin1.gif" alt="">
+					</section>
+					<section>
+						Intinya sysadmin memiliki tanggung jawab yang cukup besar, yaitu untuk memastikan tidak ada hal hal buruk yang terjadi kepada server dari sisi:
+						<br> - Deployment
+						<br> - Security
+						<br> - Availability
+					</section>
+				</section>
+				<section>
+					<section>
+						<p>Hacker</p>
+					</section>
+					<section>
+						Apa itu <b style="color: chartreuse;">Hacker</b> ?
+						<br> Hacker adalah sebuah pekerjaan yang melibatkan pengetahuan yang luas mengenai sebuah sistem lalu menggunakan seluruh pengetahuannya untuk bisa memanipulasi sistem tersebut (menggunakannya dengan cara tidak lazim / tidak biasa)
+					</section>
+					<section>
+						Bagaimana kerjanya ?
+					</section>
+					<section>
+						<p>Versi salah</p>
+						<img src="hacking1.webp" alt="" class="r-stretch">
+					</section>
+					<section>
+						<p>Versi salah</p>
+						<img src="hacking3.gif" alt="" class="r-stretch">
+					</section>
+					<section>
+						<p>Versi salah</p>
+						<img src="hacking2.webp" alt="" class="r-stretch">
+					</section>
+					<section>
+						Wrong informations
+						<br>
+						<ul>
+							<li>Hacker use kali linux</li>
+							<li>Hacker use termux</li>
+							<li>Anonymous</li>
+							<li>Cyber Army</li>
+							<li>Hacking = Criminal</li>
+						</ul>
+					</section>
+					<section>
+						Correct informations
+						<br>
+						<ul>
+							<li>Gampang dapet duit lewat bug hunting</li>
+							<li>Belajarnya mati matian</li>
+							<li>Review kodingan sampe berminggu minggu</li>
+							<li>Suka ngoprek</li>
+							<li>Kriminalitas tergantung keimanan</li>
+						</ul>
+					</section>
+				</section>
+				<section>
+					Last word
+					<br> Nyesel saat muda masih sempet, nyesel saat tua mending mati aja
+				</section>
+			</div>
+		</div>
+
+		<!-- Script sources -->
+		<script src="../../reveal.js/dist/reveal.js"></script>
+		<script src="../../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

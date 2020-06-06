@@ -1,0 +1,2 @@
+Setup all presentation using reveal.js (always fetch for latest master)
+Port presentations to PDF using decktape
