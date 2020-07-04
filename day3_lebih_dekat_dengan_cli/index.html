@@ -1,0 +1,337 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Database dan SQL</title>
+
+		<link rel="shortcut icon" href="../logo.png">
+
+		<!-- Reveal JS Sources -->
+		<link rel="stylesheet" href="../../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/theme/night.css" id="theme">
+
+		<!-- Google Font Thingy -->
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@500&family=Press+Start+2P&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet"> 
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<style>
+		section {
+			padding: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		.center {
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+			flex-direction: row !important;
+		}
+
+		.title-container {
+			font-family: 'Roboto Mono', monospace;
+			font-size: 50px;
+		}
+
+		pre code {
+			font-family: 'Fira Code', monospace !important;
+		}
+	</style>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Logo Stuff -->
+				<div style="position: fixed; display: flex; align-items: center; padding: 10px; width: 325px; background-color: #316632; border-bottom-right-radius: 20px;">
+					<img src="../logo.png" alt="logo" style="object-fit: cover; width: 125px; height: 60px; margin: 0; border-radius: 25px;">
+					<div style="width: auto; font-family: 'Bangers', cursive; margin-left: 10px; color: #ecfaad;">Daskom 1337</div>
+				</div>
+
+				<!-- Titles and description page -->
+				<section class="title-container center" data-background-color="#316632">
+					<div style="max-width: 1250px;">
+						<span style="font-size: 85px; color: #c4e045;">
+							Lebih dekat dengan <b style="color: rgb(228, 62, 219);"><strike>dia</strike></b> <b style="color: rgb(0, 0, 0);">C</b>ommand <b style="color: rgb(0, 0, 0);">L</b>ine <b style="color: rgb(0, 0, 0);">I</b>nterface
+						</span>
+						<br>
+						<br>
+						<span style="font-size: 30px;">
+							- By FAI -
+						</span>
+					</div>
+				</section>
+
+				<!-- Fun Fact Page -->
+				<section class="center" data-transition="zoom-in slide-out" data-background-color="#1A1626">
+					<div style="display: flex; flex-direction: column;">
+						<span style="align-self: flex-start; font-family: 'Press Start 2P', cursive; font-size: 30px;">
+							Code fun fact (C)
+						</span>
+						<div style="width: 1250px; font-size: 60px;">
+							<pre><code data-trim data-noescape>
+							#include &lt;stdio.h&gt;
+							void main() {
+								char x[11];
+								scanf("%[^\n]", &x); 
+								// misal input = daskom1337
+								printf("%s", x);
+							}
+
+							// daskom1337
+							</code></pre>
+						</div>
+						<div style="font-size: 25px; max-width: 1000px; margin: auto; padding-bottom: 20px; border-bottom: 2px solid #316632;">
+							scanf bisa juga menjadi pengganti gets dengan menggunakan syntax seperti regex didalamnya
+						</div>
+					</div>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div>
+							Apa itu CLI ?
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							CLI adalah Command Line Interface yang berarti sebuah antarmuka yang hanya berisi angka dan huruf tanpa adanya grafis sama sekali
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Mengapa CLI itu penting ?
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<ul>
+								<li>Mempercepat pekerjaan sehari hari</li>
+								<li>Mouseless (ga perlu tetikus)</li>
+								<li>Mempercepat kecepatan ngetik :v</li>
+								<li>Apa apa gapake ribet</li>
+								<li>Berasa <em>hacker</em> ¯\_(ツ)_/¯</li>
+								<li>And so much more ...</li>
+							</ul> <br> <br>
+							<span style="font-size: 25px;">(look at the fact that is use <em>much</em> over <em>many</em>)</span>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Basic commands
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 1155px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								ls ; cd ; mkdir ; nano ; find ; grep ; cat ; mv ; cp
+								</code></pre>
+							</div>
+							<ul>
+								<li>ls = list semua (file dan direktori) pada direktori saat ini</li>
+								<li>cd = pindah dari direktori saat ini</li>
+								<li>mkdir = membuat direktori</li>
+								<li>nano = membuat file</li>
+								<li>find = mencari file</li>
+								<li>grep = mencari sesuatu yang mirip dengan sesuatu didalam file</li>
+								<li>cat = meng-outputkan konten pada file</li>
+								<li>mv = memindahkan file</li>
+								<li>cat = meng-copy file</li>
+							</ul>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Usefull commands
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 1155px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								man ; less ; awk ; curl ; wget ; ps ; head ; tail
+								</code></pre>
+							</div>
+							<ul>
+								<li>man = membaca panduan mengenai sebuah command</li>
+								<li>less = membaca file</li>
+								<li>awk = bahasa pemrograman yang bisa digunakan langsung pada shell</li>
+								<li>curl = mengakses konten pada internet</li>
+								<li>wget = mendownload file pada internet</li>
+								<li>ps = meng-outputkan semua proses yang sedang berjalan</li>
+								<li>head = meng-outputkan konten file (memotong dari awal)</li>
+								<li>tail = meng-outputkan konten file (memotong dari akhir)</li>
+							</ul>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Dan ada sangat banyaaaaak sekali command lainnya <br> <br>
+							<span style="font-size: 25px;">(And as one said, you only need a 'man' to know everything)</span>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Sedikit tips
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 255px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								| (piping)
+								</code></pre>
+							</div>
+							Ini berguna untuk mem-pipe atau menjalankan 2 command atau lebih dengan berurutan
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 555px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								> (output redirection)
+								</code></pre>
+							</div>
+							Ini berguna untuk me-redirect output hasil dari command ke sebuah file 
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 555px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								< (input redirection)
+								</code></pre>
+							</div>
+							Ini berguna untuk me-redirect input hasil dari command / dari file ke sebuah command
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 555px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								&& (and)
+								</code></pre>
+							</div>
+							Ini berguna untuk menjalankan command bila command sebelumnya <b style="color: greenyellow;">berhasil</b> dijalankan
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 555px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								|| (else)
+								</code></pre>
+							</div>
+							Ini berguna untuk menjalankan command bila command sebelumnya <b style="color: red;">gagal</b> dijalankan
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							GIT + CLI = <b style="color: black;">Black</b> <b style="color: cyan;">Magic</b>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px; display: flex;">
+							Keajaiban adalah suatu hal yang terjadi tapi tidak terlihat
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							Contoh kali ini
+							<ul>
+								<li>Clone repository googler (Command untuk menggunakan search engine google melalui CLI)</li>
+								<li>Gunakan command googler untuk mencari daskomlab dan hanya mengoutputkan pencarian paling atas</li>
+								<li>Gunakan grep untuk mengecek output apakah berisikan daskomlab</li>
+								<li>Jika outputnya berisikan daskomlab maka tulis 'daskom number one, even in google' kedalam log.txt jika tidak tulis 'daskom stil number one in my heart'</li>
+								<li>Hapus kembali direktori googler nya</li>
+								<li>Baca log.txt</li>
+								<li>Magic just happened ...</li>
+							</ul>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<div style="width: 1350px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								git clone https://github.com/jarun/googler.git \
+								; ./googler/googler --np -n 1 daskomlab \
+								| (grep -q 'daskom' \
+								&& echo 'daskom number one, even in google' > log.txt \
+								|| echo 'daskom still number one in my heart' > log.txt) \
+								; rm -rf googler \
+								; cat log.txt
+								</code></pre>
+							</div>
+							Bisa dilihat setelahnya bahkan command googler pun tidak ada pada sistem kita
+						</div>
+					</section>
+					<section class="center">
+						<img src="mind-blown.gif" width="1000" height="600" alt="">
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Shell Automation using C
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<img src="so-answer.png" width="800" height="400" alt=""> <br>
+							Semuanya berkat stack-overflow, yang selanjutnya membawa saya kepada website bagus <br>(https://rosettacode.org/wiki/Get_system_command_output#C)
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							Jadi pada automasi kali ini kita akan membuat sebuah automasi yang bisa melihat jawaban TP praktikan dan bisa menjalankannya
+						</div>
+					</section>
+					<section class="center">
+						<img src="hand-rub.gif" width="1000" height="600" alt="">
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section class="center" data-background-color="#132100">
+					<div>
+						T H A N K S
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Script sources -->
+		<script src="../../reveal.js/dist/reveal.js"></script>
+		<script src="../../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
