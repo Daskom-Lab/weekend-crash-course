@@ -5,9 +5,9 @@
 #include <stdbool.h>
 
 const char *command_getSoalJawabanTP = "curl -s -X POST https://daskomlab.com/api/getTp/%s/%d | jq -c '[ .all_tp | .[] | select( .isProgram == 1 ) | {soal: .soal, jawaban: .jawaban} ]'";
-const char *command_indentAndShowCode = "echo '%s' > tmp ; astyle -q tmp ; rm tmp.orig ; cat tmp ;rm tmp";
+const char *command_indentAndShowCode = "echo '%s' > tmp ; astyle -q tmp ; rm tmp.orig ; cat tmp ; rm tmp";
 const char *command_writeAndExecute = "echo '%s' > tmp.c ; gcc -o tmp tmp.c";
-const char *command_cleanAllTheThings = "ls tmp && rm tmp ; ls tmp.c && rm tmp.c";
+const char *command_cleanAllTheThings = "[ -f tmp ] && rm tmp ; [ -f tmp.c ] && rm tmp.c";
 
 char *send_command (char *input, bool showOutput) {
 
