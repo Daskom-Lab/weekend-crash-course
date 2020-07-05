@@ -144,9 +144,9 @@ int main () {
 5. Fungsi\n\
 11. Array & array of string\n\
 12. Sorting\n\
-13. Searching\n\  
+13. Searching\n\
 14. Algoritma Rekursif\n\
-15. File Sekuensial\n\  
+15. File Sekuensial\n\
 "   );
 
     int modulPil;
