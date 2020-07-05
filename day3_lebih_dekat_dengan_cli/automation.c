@@ -5,9 +5,9 @@
 #include <stdbool.h>
 
 const char *command_getSoalJawabanTP = "curl -s -X POST https://daskomlab.com/api/getTp/%s/%d | jq -c '[ .all_tp | .[] | select( .isProgram == 1 ) | {soal: .soal, jawaban: .jawaban} ]'";
-const char *command_indentAndShowCode = "echo '%s' > tmp ; astyle -q tmp ; rm tmp.orig ; cat tmp ;rm tmp";
+const char *command_indentAndShowCode = "echo '%s' > tmp ; astyle -q tmp ; rm tmp.orig ; cat tmp ; rm tmp";
 const char *command_writeAndExecute = "echo '%s' > tmp.c ; gcc -o tmp tmp.c";
-const char *command_cleanAllTheThings = "ls tmp && rm tmp ; ls tmp.c && rm tmp.c";
+const char *command_cleanAllTheThings = "[ -f tmp ] && rm tmp ; [ -f tmp.c ] && rm tmp.c";
 
 char *send_command (char *input, bool showOutput) {
 
@@ -17,7 +17,6 @@ char *send_command (char *input, bool showOutput) {
  
     char   buffer[256];
     size_t chread;
-
     /* String to store entire command contents in */
     size_t comalloc = 256;
     size_t comlen   = 0;
@@ -144,9 +143,9 @@ int main () {
 5. Fungsi\n\
 11. Array & array of string\n\
 12. Sorting\n\
-13. Searching\n\  
+13. Searching\n\
 14. Algoritma Rekursif\n\
-15. File Sekuensial\n\  
+15. File Sekuensial\n\
 "   );
 
     int modulPil;
@@ -154,8 +153,6 @@ int main () {
     scanf("%d", &modulPil);
     fflush(stdin);
 
-// 1101190334
-// 14
     char command[(strlen(command_getSoalJawabanTP) - 4) + 14];
     sprintf(command, command_getSoalJawabanTP, input, modulPil);
     
