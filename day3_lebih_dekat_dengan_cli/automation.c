@@ -154,8 +154,6 @@ int main () {
     scanf("%d", &modulPil);
     fflush(stdin);
 
-// 1101190334
-// 14
     char command[(strlen(command_getSoalJawabanTP) - 4) + 14];
     sprintf(command, command_getSoalJawabanTP, input, modulPil);
     
