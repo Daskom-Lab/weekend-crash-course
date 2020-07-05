@@ -17,7 +17,6 @@ char *send_command (char *input, bool showOutput) {
  
     char   buffer[256];
     size_t chread;
-
     /* String to store entire command contents in */
     size_t comalloc = 256;
     size_t comlen   = 0;
