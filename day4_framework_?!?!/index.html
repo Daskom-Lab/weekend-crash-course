@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Framework</title>
+
+		<link rel="shortcut icon" href="../logo.png">
+
+		<!-- Reveal JS Sources -->
+		<link rel="stylesheet" href="../../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/theme/night.css" id="theme">
+
+		<!-- Google Font Thingy -->
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@500&family=Press+Start+2P&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet"> 
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<style>
+		section {
+			padding: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		.center {
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+			flex-direction: row !important;
+		}
+
+		.title-container {
+			font-family: 'Roboto Mono', monospace;
+			font-size: 50px;
+		}
+
+		pre code {
+			font-family: 'Fira Code', monospace !important;
+		}
+	</style>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Logo Stuff -->
+				<div style="position: fixed; display: flex; align-items: center; padding: 10px; width: 325px; background-color: #316632; border-bottom-right-radius: 20px;">
+					<img src="../logo.png" alt="logo" style="object-fit: cover; width: 125px; height: 60px; margin: 0; border-radius: 25px;">
+					<div style="width: auto; font-family: 'Bangers', cursive; margin-left: 10px; color: #ecfaad;">Daskom 1337</div>
+				</div>
+
+				<!-- Titles and description page -->
+				<section class="title-container center" data-background-color="#316632">
+					<div style="max-width: 1250px;">
+						<span style="font-size: 85px; color: #c4e045;">
+							Framework <b style="color: rgb(0, 0, 0);">?</b>!<b style="color: rgb(0, 0, 0);">?</b>!
+						</span>
+						<br>
+						<br>
+						<span style="font-size: 30px;">
+							- By FAI -
+						</span>
+					</div>
+				</section>
+
+				<!-- Fun Fact Page -->
+				<section class="center" data-transition="zoom-in slide-out" data-background-color="#1A1626">
+					<div style="display: flex; flex-direction: column;">
+						<span style="align-self: flex-start; font-family: 'Press Start 2P', cursive; font-size: 30px;">
+							Code fun fact (CSS)
+						</span>
+						<div style="width: 1250px; font-size: 60px;">
+							<pre><code data-trim data-noescape>
+							[debug],
+							[debug] * {
+								color:                 hsla(210, 100%, 100%, 0.9) !important;
+								background:            hsla(210, 100%,  50%, 0.5) !important;
+								outline: solid 0.25rem hsla(210, 100%, 100%, 0.5) !important;
+							
+								box-shadow: none !important;
+								filter:     none !important;
+							}
+							</code></pre>
+						</div>
+						<div style="font-size: 25px; max-width: 1000px; margin: auto; padding-bottom: 20px; border-bottom: 2px solid #316632;">
+							Cara terbaik untuk debugging css (menurut saya) <br> [source from: https://www.freecodecamp.org/news/heres-my-favorite-weird-trick-to-debug-css-88529aa5a6a3/]
+						</div>
+					</div>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div>
+							Apa itu Framework ?
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Framework dalam arti bahasanya merupakan sebuah kerangka
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Kenapa framework banyak digunakan ?
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<ul>
+								<li>Tidak perlu menulis boilerplate code</li>
+								<li>Banyak hal yang sudah langsung dihandle oleh framework itu sendiri</li>
+								<li>Mempercepat pembuatan sebuah software</li>
+							</ul>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Framework vs Library ?
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Library = Tools yang bisa kita gunakan untuk membuat suatu hal apapun itu yang kita mau <br> <br>
+							-- While on the other hand -- <br> <br>
+							Framework = Kerangka yang kita gunakan untuk membuat suatu hal yang sudah menjadi tujuan dari pembuatan framework itu sendiri
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Framework in action
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<span>Tanpa framework (PHP)</span>
+							<div style="width: 1250px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								SELECT * FROM `users` 
+								WHERE `active` == 1
+								ORDER BY `name` DESC
+								LIMIT 10
+								</code></pre>
+							</div>
+							<span>Dengan framework (PHP Laravel)</span>
+							<div style="width: 1250px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								User::where('active', 1)
+									->orderBy('name', 'desc')
+									->take(10)
+									->get();
+								</code></pre>
+							</div>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<span>Tanpa framework (CSS)</span>
+							<div style="width: 1250px; font-size: 60px;">
+								<pre><code data-trim>
+								<style>
+									.kelas1 {
+										color: red;
+										display: block;
+										font-size: 1.125rem;
+										font-style: italic;
+									}
+								</style>
+								<span class="kelas1">text</span>
+							</code></pre>
+							</div>
+							<span>Dengan framework (CSS Tailwindcss)</span>
+							<div style="width: 1250px; font-size: 60px;">
+								<pre><code data-trim>
+									<span class="text-red-800 block italic text-lg">
+										text
+									</span>
+								</code></pre>
+							</div>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<span>Tanpa framework (JS)</span>
+							<div style="width: 1250px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								var my_http = require("http");
+								my_http.createServer(function (request, response) {
+									if (request.url == '/') {
+										response.writeHeader(200, {"Content-Type": "text/plain"});
+										response.write("Hello World");
+										response.end();
+									}
+								}).listen(8080);
+								</code></pre>
+							</div>
+							<span>Dengan framework (JS Express)</span>
+							<div style="width: 1250px; font-size: 60px;">
+								<pre><code data-trim data-noescape>
+								const express = require('express')
+								const app = express()
+								
+								app.get('/', (req, res) => res.send('Hello World'))
+								
+								app.listen(8080)
+								</code></pre>
+							</div>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Bagaimana cara memilih framework ?
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<ul>
+								<li>Pilih yang paling bagus (diliat dari sisi kodingannya, dan maintainer project nya)</li>
+								<li>Kalau untuk mencari kerja: cari yang paling banyak digunakan (sedang/akan trending)</li>
+								<li>Kalau bisa cari yang all in one, agar menghindari dependency hell kedepannya</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Framework vs Native
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<ul>
+								<li>Native memiliki support lebih tinggi</li>
+								<li>Framework lebih cepat untuk menyelesaikan sebuah project</li>
+								<li>Framework sangat bergantung pada maintainer nya dan rentan hilang dalam beberapa tahun</li>
+							</ul>
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Framework bergantung pada Native <br> <br>
+							sementara <br> <br>
+							Native tidak bergantung pada Framework
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section class="center" data-background-color="#132100">
+					<div>
+						T H A N K S
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Script sources -->
+		<script src="../../reveal.js/dist/reveal.js"></script>
+		<script src="../../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
