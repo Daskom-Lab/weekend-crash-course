@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginner path to Hacking</title>
+
+		<link rel="shortcut icon" href="../logo.png">
+
+		<!-- Reveal JS Sources -->
+		<link rel="stylesheet" href="../../reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="../../reveal.js/dist/theme/night.css" id="theme">
+
+		<!-- Google Font Thingy -->
+		<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Fira+Code:wght@500&family=Press+Start+2P&family=Roboto+Mono:wght@700&display=swap" rel="stylesheet"> 
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="../../reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<style>
+		section {
+			padding: 0 !important;
+			width: 100% !important;
+			height: 100% !important;
+		}
+
+		.center {
+			display: flex !important;
+			justify-content: center !important;
+			align-items: center !important;
+			flex-direction: row !important;
+		}
+
+		.title-container {
+			font-family: 'Roboto Mono', monospace;
+			font-size: 50px;
+		}
+
+		pre code {
+			font-family: 'Fira Code', monospace !important;
+		}
+	</style>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<!-- Logo Stuff -->
+				<div style="position: fixed; display: flex; align-items: center; padding: 10px; width: 325px; background-color: #316632; border-bottom-right-radius: 20px;">
+					<img src="../logo.png" alt="logo" style="object-fit: cover; width: 125px; height: 60px; margin: 0; border-radius: 25px;">
+					<div style="width: auto; font-family: 'Bangers', cursive; margin-left: 10px; color: #ecfaad;">Daskom 1337</div>
+				</div>
+
+				<!-- Titles and description page -->
+				<section class="title-container center" data-background-color="#316632">
+					<div style="max-width: 1250px;">
+						<span style="font-size: 85px; color: #c4e045;">
+							Beginner path to <br> 
+							<b style="color: rgb(253, 17, 0);">Hacking</b>
+						</span>
+						<br>
+						<br>
+						<span style="font-size: 30px;">
+							- By FAI -
+						</span>
+					</div>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div>
+							Introduction
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Hacking adalah semua tentang manipulasi
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Hacking > Coding
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Jurusan jurusan di hacking
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1250px;">
+							<ul>
+								<li>Cryptography</li>
+								<li>Reverse Engineering</li>
+								<li>Binary Exploitation</li>
+								<li>Web Exploitation</li>
+								<li>Forensic Analysis</li>
+								<li>OSINT (general)</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Cryptography
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Encryption - Hashing - Encoding<br>
+							https://www.geeksforgeeks.org/encryption-encoding-hashing/
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							CTF Challenges :
+							<ul>
+								<li>XOR</li>
+								<li>AES EBC-CBC</li>
+								<li>RSA</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Reverse Engineering
+						</div>
+					</section>
+					<section class="center">
+						<img src="reverse.png" width="1000" height="300" alt="">
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Binary Exploitation (pwn)
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Mengandalkan kesalahan programmer dalam memory handling dan sebagainya
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							CTF Challenges :
+							<ul>
+								<li>Buffer overflow</li>
+								<li>Off by one byte</li>
+								<li>Heap Exploitation</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Web Exploitation (pwn)
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Mengandalkan kesalahan programmer dalam banyak hal
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							CTF Challenges :
+							<ul>
+								<li>XSS (Cross Site Scripting)</li>
+								<li>SQLi (SQL injection)</li>
+								<li>CSRF (Cross Site Request Forgery)</li>
+								<li>SSRF (Server Side Request Forgery)</li>
+								<li>LFI (Local File Inclusion)</li>
+								<li>RCE (Remote Code Execution)</li>
+								<li>TOC-TOU (Time of Check Time of Use)</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Forensic Analysis
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Mencari suatu hal yang (biasanya) tersembunyi dalam hal lain
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							CTF Challenges :
+							<ul>
+								<li>Dumped Memory analysis (Pada OS Level)</li>
+								<li>Image Analysis (Steganography)</li>
+								<li>Sound Analysis</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section data-background-color="#132100">
+					<section class="center">
+						<div style="max-width: 1000px;">
+							OSINT (Open Source Intelligence)
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							Mencari suatu hal yang ada di internet (Open Sourced), biasanya digunakan untuk mencari orang hilang / mencari aset aset perusahaan (berguna untuk mencari hidden bug juga)
+						</div>
+					</section>
+					<section class="center">
+						<div style="max-width: 1000px;">
+							CTF Challenges :
+							<ul>
+								<li>Find missing person</li>
+								<li>And many more</li>
+							</ul>
+						</div>
+					</section>
+				</section>
+
+				<!-- Normal Page -->
+				<section class="center" data-background-color="#132100">
+					<div>
+						T H A N K S
+					</div>
+				</section>
+
+			</div>
+		</div>
+
+		<!-- Script sources -->
+		<script src="../../reveal.js/dist/reveal.js"></script>
+		<script src="../../reveal.js/plugin/notes/notes.js"></script>
+		<script src="../../reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="../../reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			Reveal.initialize({
+				hash: true,
+				disableLayout: true,
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
