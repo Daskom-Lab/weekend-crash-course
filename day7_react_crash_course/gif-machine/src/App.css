@@ -1,0 +1,59 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #ffeead;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    background-color: #96ceb4;
+    color: white;
+}
+
+nav ul{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav li{
+    color: white;
+}
+
+home, .input-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+about, contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+about span{
+    margin: 0 5rem 0 5rem;
+}
+
+.input-bar button{
+    margin-top: 1rem;
+    width: 8rem;
+}
+  
+contact span{
+    margin-bottom: 1rem;
+}
+
+.gif-bar{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
