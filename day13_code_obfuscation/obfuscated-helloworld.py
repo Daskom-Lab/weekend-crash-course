@@ -1,0 +1,1 @@
+print((a:=''.join([str(chr(int(f'0x{p}',0))+(' ' if o==3 else '')) for o,p in enumerate('0x480x650x6c0x6f0x570x720x64'.split('0x')[1:])]))+f'\r{a[:3]}l{a[3:6]}o{a[6:7]}l{a[7:8]}')

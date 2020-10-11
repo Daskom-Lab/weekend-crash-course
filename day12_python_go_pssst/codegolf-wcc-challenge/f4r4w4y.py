@@ -1,0 +1,1 @@
+print('Non '*(len((a:=[*iter(input,'')])[0])//len(a)==1)+'Symmetrical')

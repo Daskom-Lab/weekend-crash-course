@@ -1,0 +1,1 @@
+a=list(iter(input,''));print((len(a)-2!=len(a[0])//2)*"Non "+"Symmetrical")
