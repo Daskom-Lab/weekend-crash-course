@@ -1,7 +1,7 @@
 from django.template import Context
 from django.shortcuts import render
 
-name = 'Fakhri [fai] [f4r4w4y]'
+name = 'fakhri [fai] [f4r4w4y]'
 profession = 'Programmer, Developer'
 hobbies = 'Playing computer or other kind of electronic devices'
 

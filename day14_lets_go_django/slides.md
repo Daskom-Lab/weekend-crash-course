@@ -156,20 +156,6 @@ Note: menambahkan file tidak akan men-trigger auto reload nya.
 
 ---
 
-### Bonus stuff
-
-Disini saya akan coba men-demo-kan apa yang terjadi jika terdapat security vulnerability pada aplikasi django yang kita buat.
-
-Yang paling populer dikalangan ctf player dan (mungkin) bug bounty hunter adalah SSTI (Server Side Template Injection)
-
-Let's pop a calculator !!!
-
----
-
-![width:800px height:500px](https://media.giphy.com/media/l0D76LT6o1jaG2g0M/giphy.gif)
-
----
-
 ### Terimakasih
 
 Mohon maaf bila ada kesalahan dan seperti biasa yang buruk datang dari saya dan yang baik hanya datang dari-Nya.
