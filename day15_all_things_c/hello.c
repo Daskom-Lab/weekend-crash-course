@@ -8,5 +8,5 @@ int main(int argc, char *argv[]) {
         |  _  | | \n\
         |_| |_|_| \n\
     ");
-    return 1337;
+    return 17;
 }
