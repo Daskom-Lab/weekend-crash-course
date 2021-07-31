@@ -1,0 +1,7 @@
+how to check: pkg-config --exists gtk+-3.0 && echo "Installed" || echo "Not installed"
+based on https://stackoverflow.com/questions/54762362/how-to-setup-a-c-development-environment-on-linux-for-gtk
+
+
+main documentation:
+
+https://developer.gnome.org/gtk3/stable/gtk-getting-started.html
