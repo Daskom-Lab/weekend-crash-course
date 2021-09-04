@@ -1,3 +1,5 @@
+#dont forget to explain it from very very basic!!!!!
+
 import random
 inp1=[1,0,1,0]
 inp2=[1,1,0,0]
@@ -71,17 +73,17 @@ for epochs in range(20):
         print("batch: ",str(x))
         print("loss: ",str(loss))
         print()
-    print("epoch loss: ",str(acc_loss), " best loss: ",str(best_loss))
+    print("epoch loss: ",str(abs(acc_loss/4)), " best loss: ",str((abs(best_loss)))) #ini pake mean absolute error (mae) kalo mau pake sum error biasa hapus aja abs sama bagi 4 nya
     #w1,w2,b=activation_random()
-    w1,w2,b=activation_little_bit_better(acc_loss,w1,w2,b)
+    #w1,w2,b=activation_little_bit_better(acc_loss,w1,w2,b)
+    w1,w2,b,best_loss=activation_with_memory(acc_loss/4,w1,w2,b,best_loss)
     #w1,w2,b,best_loss=less_dukun_memory(acc_loss,w1,w2,b,best_loss,0.1)
     acc_loss=0
     print()
+
+
 print("predict a value!")
 i=float(input("first input: "))
 j=float(input("second input: "))
 print("output")
 print(perceptron(i,j))
-    
-    # if loss_new<loss:
-    #     loss=loss_new
