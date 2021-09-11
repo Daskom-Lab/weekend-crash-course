@@ -108,11 +108,12 @@ def grad_softmax_crossentropy_with_logits(logits,reference_answers):
     return (- ones_for_answers + softmax) / logits.shape[0]
 
 
-import keras
+import tensorflow as tf
+
 import matplotlib.pyplot as plt
 
 def load_dataset(flatten=False):
-    (X_train, y_train), (X_test, y_test) = keras.datasets.mnist.load_data()
+    (X_train, y_train), (X_test, y_test) = tf.keras.datasets.mnist.load_data()
     # normalize x
     X_train = X_train.astype(float) / 255.
     X_test = X_test.astype(float) / 255.
@@ -196,19 +197,22 @@ def iterate_minibatches(inputs, targets, batchsize, shuffle=False):
 from IPython.display import clear_output
 train_log = []
 val_log = []
-for epoch in range(25):
+epo=5
+for epoch in range(epo):
     for x_batch,y_batch in iterate_minibatches(X_train,y_train,batchsize=32,shuffle=True):
         train(network,x_batch,y_batch)
     
     train_log.append(np.mean(predict(network,X_train)==y_train))
     val_log.append(np.mean(predict(network,X_val)==y_val))
-    
     clear_output()
     print("Epoch",epoch)
     print("Train accuracy:",train_log[-1])
     print("Val accuracy:",val_log[-1])
-    plt.plot(train_log,label='train accuracy')
-    plt.plot(val_log,label='val accuracy')
-    plt.legend(loc='best')
-    plt.grid()
-    plt.show()
+    
+plt.show()
+clear_output()
+plt.plot(train_log,label='train accuracy')
+plt.plot(val_log,label='val accuracy')
+plt.legend(loc='best')
+plt.grid()
+plt.show()
